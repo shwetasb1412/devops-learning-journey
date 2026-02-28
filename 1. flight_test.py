@@ -16,7 +16,8 @@ class Flight():
     
 
     def update_route(self, destination,source=None):
-        self.source=source
+        if source is not None:
+            self.source=source
         self.destination=destination
        
 
@@ -31,3 +32,4 @@ f.update_route("Milan")
 f.get_flight_info()
 f.update_route("Hawai","Tennessee")
 f.get_flight_info()
+
