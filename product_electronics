@@ -1,0 +1,35 @@
+class Product:
+    name=""
+    price=0.0
+    brand=""
+    warranty=0
+
+    def display(self):
+        print(f"Product Name: {self.name}")
+        print(f"Product Brand: {self.brand}")
+        print(f"Product Price: {self.price}")
+        
+
+    def calc_price(self,count):
+        tot=self.price*count
+        print(f"Product Total Cost: {tot}")
+    
+class Electronics(Product):
+    type="Electronics"
+    count=10
+
+    def displayAllDetails(self):
+        print(f"Product Type: {self.type}")
+        super().display()
+        print(f"Product Warranty: {self.warranty}")
+        
+        print(f"Product Count: {self.count}")
+        
+        super().calc_price(self.count)
+
+e1=Electronics()
+e1.name="Cell Phone"
+e1.brand="Samsung"
+e1.price=56000.00
+e1.warranty=3
+e1.displayAllDetails()
